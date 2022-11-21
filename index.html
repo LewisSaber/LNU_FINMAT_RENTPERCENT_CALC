@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Fin Mat</title>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <img id="logo" src="Logo.jfif" />
+    <table id="input_table">
+      <tr>
+        <td class="table_header" colspan="3">Введіть дані:</td>
+      </tr>
+      <tr>
+        <td class="radio">
+          <input
+            type="radio"
+            name="SorA"
+            onchange="radio_on_change('S')"
+            checked
+            id="Sradio"
+          />
+        </td>
+        <td class="table_text">Нарощена сума</td>
+        <td class="table_input">
+          <input type="number" min="0" id="Sinput" placeholder="100000" />
+        </td>
+      </tr>
+      <tr>
+        <td class="radio">
+          <input type="radio" name="SorA" onchange="radio_on_change('A')" />
+        </td>
+        <td class="table_text">Cучасна вартість</td>
+        <td class="table_input">
+          <input type="number" min="0" id="Ainput" disabled />
+        </td>
+      </tr>
+      <tr>
+        <td class="radio"></td>
+        <td class="table_text">Внески:</td>
+        <td class="table_input">
+          <input type="number" min="1" id="Rinput" placeholder="10000" />
+        </td>
+      </tr>
+      <tr>
+        <td class="radio"></td>
+        <td class="table_text">Періодів нарахування:</td>
+        <td class="table_input">
+          <input type="number" min="1" placeholder="7" id="Ninput" />
+        </td>
+      </tr>
+      <tr>
+        <td class="radio"></td>
+        <td class="table_text">Точність</td>
+        <td class="table_input">
+          <input
+            type="number"
+            min="0.00000001"
+            placeholder="0.0001"
+            id="Einput"
+          />
+        </td>
+      </tr>
+      <tr>
+        <td class="table_header" colspan="3">
+          <button id="calc" onclick="calculate()">Порахувати</button>
+        </td>
+      </tr>
+      <tr>
+        <td class="table_header" colspan="3">Результат:</td>
+      </tr>
+      <tr>
+        <td colspan="3">
+          <div  class="result_selector">
+            <input type="radio" name="result"  onchange = "display_result()" id="percent" checked /> %
+          </div>
+          <div  class="result_selector">
+            <input type="radio" name="result" onchange = "display_result()"/> десяткове
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="3">
+          <div id="result" >0</div>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

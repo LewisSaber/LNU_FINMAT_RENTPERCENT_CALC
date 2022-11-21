@@ -1,0 +1,47 @@
+#input_table{
+    border: blue inset 1vh;
+    background-color: lightblue;
+    border-radius: 10%;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#0e245e;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 550;
+    font-size: 1.4em;
+    
+}
+input{
+    font-size: 1.3em;
+}
+#logo{
+    width: 30vw;
+}
+.table_header{
+    text-align: center;
+    font-size: 1.7em;
+}
+.result_selector{
+    width: 40%;
+    float: left;
+    display: block;
+    margin-left: 10%;
+}
+#result{
+    text-align: center;
+    visibility: hidden;
+    font-size: 1.4em;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+input[type=radio] { 
+    height: 1.4rem;
+    width: 1.4rem;
+   
+}
+button{
+    font-size: 1.4rem;
+}
